@@ -9,19 +9,20 @@ class DDSpanTest extends Specification {
     setup:
     final DDSpanContext context =
         new DDSpanContext(
-            1L,
-            1L,
-            0L,
-            "fakeService",
-            "fakeOperation",
-            "fakeResource",
-            PrioritySampling.UNSET,
-            Collections.<String, String>emptyMap(),
-            false,
-            "fakeType",
-            null,
-            null,
-            null)
+          1L,
+          1L,
+          0L,
+          "fakeService",
+          "fakeOperation",
+          "fakeResource",
+          PrioritySampling.UNSET,
+          Collections.<String, String> emptyMap(),
+          false,
+          "fakeType",
+          null,
+          null,
+          null,
+          false)
 
     final DDSpan span = new DDSpan(1L, context)
 

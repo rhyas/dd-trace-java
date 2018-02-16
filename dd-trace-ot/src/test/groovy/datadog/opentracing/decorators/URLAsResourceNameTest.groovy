@@ -94,7 +94,8 @@ class URLAsResourceNameTest extends Specification {
         "fakeType",
         tags,
         null,
-        null)
+        null,
+        false)
 
     then:
     decorator.afterSetTag(context, Tags.HTTP_URL.getKey(), value)
