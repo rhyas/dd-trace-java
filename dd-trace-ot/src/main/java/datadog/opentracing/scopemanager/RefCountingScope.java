@@ -2,9 +2,12 @@ package datadog.opentracing.scopemanager;
 
 import io.opentracing.Scope;
 import io.opentracing.Span;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class RefCountingScope implements Scope {
+import datadog.trace.context.ContextPropagator;
+
+public class RefCountingScope implements Scope, ContextPropagator {
   final ContextualScopeManager scopeManager;
   final AtomicInteger refCount;
   private final Span wrapped;
@@ -46,7 +49,7 @@ public class RefCountingScope implements Scope {
     return new Continuation();
   }
 
-  public class Continuation {
+  public class Continuation implements ContextPropagator.Continuation {
     public Continuation() {
       refCount.incrementAndGet();
     }

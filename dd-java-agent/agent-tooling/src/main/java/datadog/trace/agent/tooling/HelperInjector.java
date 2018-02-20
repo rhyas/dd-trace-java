@@ -26,6 +26,11 @@ public class HelperInjector implements Transformer {
   private Map<TypeDescription, byte[]> helperMap = null;
   private final Set<ClassLoader> injectedClassLoaders = new HashSet<>();
 
+  // TODO
+  public HelperInjector(boolean injectOnBootstrap, final String... helperClassNames) {
+    this.helperClassNames = new LinkedHashSet<>(Arrays.asList(helperClassNames));
+  }
+
   /**
    * Construct HelperInjector.
    *

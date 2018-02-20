@@ -14,6 +14,7 @@ include ':dd-java-agent:instrumentation:apache-httpclient-4.3'
 include ':dd-java-agent:instrumentation:aws-sdk'
 include ':dd-java-agent:instrumentation:datastax-cassandra-3.2'
 include ':dd-java-agent:instrumentation:jax-rs'
+include ':dd-java-agent:instrumentation:java-concurrent'
 include ':dd-java-agent:instrumentation:jboss-classloading'
 include ':dd-java-agent:instrumentation:jdbc'
 include ':dd-java-agent:instrumentation:jms-1'
@@ -26,7 +27,8 @@ include ':dd-java-agent:instrumentation:okhttp-3'
 include ':dd-java-agent:instrumentation:osgi-classloading'
 include ':dd-java-agent:instrumentation:servlet-2'
 include ':dd-java-agent:instrumentation:servlet-3'
-include ':dd-java-agent:instrumentation:spring-web'
+// FIXME vv
+// include ':dd-java-agent:instrumentation:spring-web'
 include ':dd-java-agent:instrumentation:trace-annotation'
 
 
