@@ -21,8 +21,7 @@ class DDSpanTest extends Specification {
           "fakeType",
           null,
           null,
-          null,
-          false)
+          null)
 
     final DDSpan span = new DDSpan(1L, context)
 

@@ -40,8 +40,7 @@ class HTTPCodecTest extends Specification {
           "fakeType",
           null,
           null,
-          null,
-          false)
+          null)
 
     final Map<String, String> carrier = new HashMap<>()
 
